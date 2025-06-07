@@ -28,5 +28,5 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
