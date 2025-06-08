@@ -34,14 +34,6 @@ resource "cloudflare_record" "mon_dns2" {
   ttl     = 3600
 }
 
-resource "cloudflare_record" "test_dash" {
-  zone_id = "a3aa4938a1d46a31ecb34afc6a32af81"
-  name    = "test-dash"
-  content = "192.0.2.1"
-  type    = "A"
-  ttl     = 3600
-}
-
 resource "cloudflare_record" "test_git" {
   zone_id = "a3aa4938a1d46a31ecb34afc6a32af81"
   name    = "test-git"
