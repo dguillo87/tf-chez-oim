@@ -5,6 +5,13 @@ terraform {
       version = "~> 4"
     }
   }
+
+    backend "s3" {
+    bucket     = "terraform-state-david-cloudflare"
+    region     = "eu-west-3"
+    key        = "env:terraform.tfstate"
+    encrypt        = true
+  }
 }
 
 provider "cloudflare" {
@@ -42,4 +49,7 @@ resource "cloudflare_record" "test_git" {
   type    = "A"
   ttl     = 3600
 }
+
+
+
 
